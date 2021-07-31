@@ -1,0 +1,101 @@
+/* Header */
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6232, #f7442e );
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+}
+/* List nav header */
+.navbar__navbar-list{
+    padding-left: 0;
+    list-style: none;
+    margin-top: 8px;
+    min-height: 16px;
+}
+.navbar__navbar-item{
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+.navbar__navbar-item--bold{
+    font-weight: 500;
+}
+.navbar__navbar-item,
+.navbar__navbar-item-link:hover,
+.navbar__navbar-icon-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--while-color);
+    text-decoration: none;
+}
+
+/* border ngăn cách giữa các nav */
+.navbar__navbar-item--separate::after{
+    content: "";
+    display: block;
+    height: 16px;
+    position: absolute;
+    border-left: 2px solid #fa897a;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Trỏ chuột vào */
+.navbar__navbar-item:hover{
+    cursor: pointer;
+    color: rgba(255,255,255, 0.7);
+}
+.navbar__navbar-icon-link:hover{
+    opacity: 0.7;
+}
+/* CSS Icons  */
+.navbar__navbar-item-link{
+    color: var(--while-color);
+    text-decoration: none;
+}
+.navbar__navbar-icon-link{
+    font-size: 1.6rem;
+    margin: 0 4px;
+}
+/* Căn giữa chữ và icon */
+.navbar__navbar-item,
+.navbar__navbar-item-link,
+.navbar__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+}
+/* Disable Kết nối */
+.navbar__navbar-title--no-cursor{
+    color: var(--while-color);
+    cursor: text;
+    font-size: 1.4rem;
+}
+.navbar__navbar-item i {
+    padding-right: 4px;
+}
+/* Navbar QRCODE */
+.navbar__qr-code{
+    position: absolute;
+    width: 186px;
+    background-color: var(--while-color);
+    left: 0;
+    top: 100%;
+    padding: 4px;
+    display: none;
+    border-radius: 2px;
+}
+.navbar__qr-code-img{
+    width: 100%;
+}
+.navbar__qr-apps{
+    display: flex;
+    justify-content: space-around;
+}
+.navbar__qr-apps-img{
+    height: 16px;
+}
+.navbar__navbar-item--has-qr:hover .navbar__qr-code{
+    display: block;
+}
