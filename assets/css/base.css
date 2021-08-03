@@ -2,6 +2,11 @@
     --while-color : #fff;
     --text-color:#333;
     --black-color:#000;
+    --primary-color:#EE4D2D;
+    --border-color:#dbdbdb;
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-with-search-height:calc(var(--header-height) - var(--navbar-height))
 }
 *{
     box-sizing: inherit;
@@ -12,7 +17,7 @@ html{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-/* Chuẩn bị cho responsive */
+/* responsive */
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -24,4 +29,75 @@ html{
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+}
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: faceIn linear 0.2s;
+    display: none;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.4);
+}
+.modal__body{
+    margin: auto;
+    position: relative;
+    background-color: var(--while-color);
+    --growth-from:0.7;
+    --growth-to:1;
+    animation: growth linear 0.2;
+}
+/* btn */
+.btn{
+    min-width: 142px;
+    line-height: 34px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color); 
+    background: none;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px;
+}
+.btn.btn--nomal:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.btn.btn--primary{
+   color: var(--while-color);
+   background-color: var(--primary-color);
+}
+.btn.btn--disable{
+    cursor:default;
+    background-color: #c3c3c3;
+}
+.open{
+    display: block;
+}
+/* Animation*/
+@keyframes faceIn{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
 }
