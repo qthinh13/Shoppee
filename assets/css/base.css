@@ -29,6 +29,24 @@ html{
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+/* Cbi responsive */
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+.grid__column-2-4{
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 /* Modal */
 .modal{
@@ -65,7 +83,7 @@ html{
     cursor: pointer;
     color: var(--text-color); 
     background: none;  
-    display: flex;
+    display:inline-flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 8px;
@@ -84,6 +102,7 @@ html{
 .open{
     display: block;
 }
+
 /* Animation*/
 @keyframes faceIn{
     from{
