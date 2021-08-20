@@ -10,16 +10,19 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
+
 </head>
 
 <body>
     <div class="main">
         <!-- Header -->
         <header class="header">
-            <div class="grid">
+            <div class="grid wide">
                 <!-- Nav -->
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <!-- Nav list left -->
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--separate">Kênh Người Bán</li>
@@ -139,7 +142,7 @@
                 </nav>
                 <!-- Logo -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -259,7 +262,7 @@
         <!-- End header -->
         <!-- Container -->
         <div class="app__container">
-            <div class="grid app__content">
+            <div class="app__content grid wide">
                 <div class="grid__row">
                     <!-- Column-2 -->
                     <div class="grid__column-2 ">
@@ -283,7 +286,7 @@
                     </div>
                     <!-- Column-10 -->
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn ">Phổ biến</button>
                             <button class="home-filter__btn-primary btn btn--primary ">Mới nhất</button>
@@ -882,7 +885,7 @@
         <!-- End container -->
         <!-- Footer -->
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -977,7 +980,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">© 2021 Shopee. Tất cả các quyền được bảo lưu.</p>
                 </div>
             </div>
