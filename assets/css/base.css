@@ -19,7 +19,7 @@ html{
     box-sizing: border-box;
 }
 /* responsive */
-.grid__row {
+.grid__row{
     display: flex;
     flex-wrap: wrap;
     margin-left: -5px;
@@ -101,6 +101,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 0;
 }
 .pagination-item{
     list-style: none;
@@ -115,7 +116,7 @@ html{
     text-decoration: none;
     color: #939393;
     font-size: 1.8rem;
-    height: 30px;
+    --height: 30px;
     min-width: 40px;
     text-align: center;
     line-height: 30px;

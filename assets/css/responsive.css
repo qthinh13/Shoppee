@@ -7,12 +7,10 @@
     .hide-on-mobile-tablet {
         display: none;
     }
-    
-}
-/* Tablets*/
-@media (min-width: 740px) and (max-width:1023px){
-    .hide-on-tablet {
-        display: none;
+    .header__sort-bar{
+        display: flex;
+        z-index: 2;
+        overflow: hidden;
     }
     .header{
         position: fixed;
@@ -20,16 +18,20 @@
         right: 0;
         top: 0;
         left: 0;  
+        height: var(--header-height);
+        background-image: linear-gradient(0,#fe6232, #f7442e );
     }
-    .header__sort-bar{
-        display: flex;
+
+    
+}
+/* Tablets*/
+@media (min-width: 740px) and (max-width:1023px){
+    .hide-on-tablet {
+        display: none;
     }
     .header__cart{
         width: 80px;
         text-align: right;
-    }
-    .header__cart-noitice{
-        right: -12px;
     }
     .header__cart-list{
         position: fixed;
@@ -50,12 +52,19 @@
     }
 }
 /* Mobile */
-@media (max-width: 739px    ) {
+@media (max-width: 739px) {
     .hide-on-mobile {
         display: none;
     }
     .header-with-search{
         justify-content: space-between;
+    }
+
+    .header__logo,
+    .header__cart
+    {
+        width: unset;
+        text-align: center;
     }
     .header__search{
         position: fixed;
@@ -64,14 +73,38 @@
         left: 0;
         height: 46px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        padding: 0 16px;
+        animation: mobileSearchSideIn linear 0.3s;
+        display: none;
     }
-    .header__logo{
-        width: unset;
+    .header__search-history{
+        width: 100%;
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-heigh));
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
-    .header__cart-noitice{
-        right: 0;
+    .app__container{
+        margin-top: calc(var(--header-height ) + var(--header-sort-bar-heigh));
     }
-    .header__cart{
-        width: 50px;
+    .app__content{
+        margin: 0 4px;
+    }
+    .pagination-item{
+        margin: 0;
+    }
+    .pagination-item__link{
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+    @keyframes mobileSearchSideIn{
+        from{
+                top: calc(var(--header-height) / 2);
+        }
+        to{
+            top: var(--header-height);
+        }
     }
 }
