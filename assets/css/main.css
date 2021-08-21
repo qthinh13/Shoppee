@@ -10,6 +10,49 @@
     height: 34px;
     align-items: center;
 }
+/* Header Sort bar */
+.header__sort-bar{
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: var(--while-color);
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.header__sort-item{
+    flex: 1;
+}
+.header__sort-link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: var(--header-sort-bar-heigh);
+    position: relative;
+}
+.header__sort-link::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 60%;
+    border-left: 1px solid #e5e5e5;
+    transform: translateY(-50%);
+}
+.header__sort-item:first-child .header__sort-link::before{
+    display: none;
+}
+.header__sort-item--active .header__sort-link {
+    color: var(--primary-color);
+}
 /* List nav header */
 .header__navbar-list{
     padding-left: 0;
@@ -385,12 +428,19 @@
 .auth-form__help-forgot{
     color: var(--primary-color);
 }
-/* Header Search */
+/* Header With Search */
 .header-with-search{
     height:var(--header-with-search-height);
     display: flex;
     align-items: center;
     margin: 0 8px;
+}
+.header__mobile-search{
+    padding: 0 12px;
+}
+.header__mobile-search-icon{
+    font-size: 2.6rem;
+    color: var(--while-color);
 }
 /* Logo  */
 .header__logo{
@@ -399,11 +449,14 @@
 .header__logo-link{
     color: transparent;
     text-decoration: none;
+    display: block;
+    line-height: 0;
 }
 .header__logo-img{
     height: 60px;
     width: 162px;
 }
+
 /* Search */
 .header__search{
     border-radius: 2px;
@@ -426,13 +479,11 @@
     color: var(--text-color);
     line-height: 40px;
     border: none;
-    width: 100%;
     height: 100%;
     outline: none;
     font-weight: 500;
-
-
 }
+
 /* Search icon */
 .header__search-btn{
     background-color: var(--primary-color);
@@ -1088,22 +1139,6 @@ i.home-product-item__icon-fill{
     margin: 0;
     font-size: 1.3rem;
     text-align: center;
-}
-/* Responsive */
-/* Mobile */
-@media only screen and (max-width:739px)
-{
-
-}
-/* Table */
-@media  only screen and (min-width:740px) and (max-width:1023px)
-{
-
-}
-/* PC */
-@media only screen and (min-width:1024px)
-{
-
 }
 /* Animation Notify */
 @keyframes NotifyGrowth{

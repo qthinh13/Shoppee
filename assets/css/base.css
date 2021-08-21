@@ -6,7 +6,8 @@
     --border-color:#dbdbdb;
     --header-height:120px;
     --navbar-height:34px;
-    --header-with-search-height:calc(var(--header-height) - var(--navbar-height))
+    --header-with-search-height:calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-heigh:46px ;
 }
 *{
     box-sizing: inherit;
@@ -43,6 +44,7 @@ html{
 /* Modal */
 .modal{
     position: fixed;
+
     top: 0;
     right: 0;
     bottom: 0;
@@ -95,7 +97,7 @@ html{
     display: block;
 }
 /* Pagination */
-.pagination{
+.pagination-list{
     display: flex;
     justify-content: center;
     align-items: center;
